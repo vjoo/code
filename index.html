@@ -1,171 +1,225 @@
 <!doctype html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="description" content="" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>下载页</title>
+    <meta name="viewport"
+        content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>下载页</title>
 </head>
- <style>
-	 * {
-    margin: 0;
-    padding: 0;
-}
-* {
-    box-sizing: border-box;
-}
-	 body, input, textarea, button, select {
-    font-family: Helvetica, STHeiti STXihei, Microsoft YaHei, Arial;
-    font-size: 14px;
-    outline: none;
-    line-height: 1.6;
-    /* min-width: 320px; */
-}
-	 .reward-list a, a, a:active {
-    text-decoration: none;
-}
-	 .pattern.left {
-    left: 0;
-}.pattern.right {
-    right: 0;
-}
-	 .pattern {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    max-width: 312px;
-    width: 21.66%;
-    transition: all .5s;
-}
-	.juzhong{   display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  align-items: center;}
-	 .iconlogo{width: 100px;height: 100px;margin-top: 30%;}
-	 @media screen and (min-width:1024px){
-.iconlogo{margin-top: 30%;}
-}
-	 @media screen and (min-width:1280px){
-.iconlogo{margin-top: 10%;}
-}
-	 
-	 .iconlogo img{ 
-    width: 100%;
-    height: 100%;
-    border-radius: 17.54%;
-		 
-		 box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.24), 6px 6px 16px rgba(202, 148, 102, 0.1);
-	 
-	 
-	 
-	 
-	 }
-	 .juzhong h2{margin: 20px 0px 10px 0px;color: #505556}
-	 
-	 .release-info{text-align: center;color: #999;border-top: 1px solid #eee;padding-top: 20px;}
-	 .dowbt {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center; padding:5% 10% ;
-}
-	 .dowbt .dowbt-btn:first-of-type {
-    margin-left: 0px;
-}
-.dowbt .dowbt-btn {
-    margin: 5px;
-    border-radius: 4px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-}
-.dowbt .x {
-    width: 100%;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-}
-.dowbt-btn {
-    display: block;
-    width: 100%;
-    padding: 10px 10px;
-    font-size: 14px;
-    background-color: #f68204;
-    text-align: center;
-    color: #fff;
-    border-radius: 100px;
-    margin-top: 10px; max-width: 150px;
-}
-	 .dowbt-btn.lv{background-color: #09bb07;}
-	</style>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body,
+    input,
+    textarea,
+    button,
+    select {
+        font-family: Helvetica, STHeiti STXihei, Microsoft YaHei, Arial;
+        font-size: 14px;
+        outline: none;
+        line-height: 1.6;
+        /* min-width: 320px; */
+    }
+
+    .reward-list a,
+    a,
+    a:active {
+        text-decoration: none;
+    }
+
+    .pattern.left {
+        left: 0;
+    }
+
+    .pattern.right {
+        right: 0;
+    }
+
+    .pattern {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        max-width: 312px;
+        width: 21.66%;
+        transition: all .5s;
+    }
+
+    .juzhong {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .iconlogo {
+        width: 100px;
+        height: 100px;
+        margin-top: 30%;
+    }
+
+    @media screen and (min-width:1024px) {
+        .iconlogo {
+            margin-top: 30%;
+        }
+    }
+
+    @media screen and (min-width:1280px) {
+        .iconlogo {
+            margin-top: 10%;
+        }
+    }
+
+    .iconlogo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 17.54%;
+
+        box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.24), 6px 6px 16px rgba(202, 148, 102, 0.1);
+
+
+
+
+    }
+
+    .juzhong h2 {
+        margin: 20px 0px 10px 0px;
+        color: #505556
+    }
+
+    .release-info {
+        text-align: center;
+        color: #999;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    .dowbt {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 5% 10%;
+    }
+
+    .dowbt .dowbt-btn:first-of-type {
+        margin-left: 0px;
+    }
+
+    .dowbt .dowbt-btn {
+        margin: 5px;
+        border-radius: 4px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .dowbt .x {
+        width: 100%;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+
+    .dowbt-btn {
+        display: block;
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 14px;
+        background-color: #f68204;
+        text-align: center;
+        color: #fff;
+        border-radius: 100px;
+        margin-top: 10px;
+        max-width: 150px;
+    }
+
+    .dowbt-btn.lv {
+        background-color: #09bb07;
+    }
+
+    body {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+</style>
+
 <body>
-	
-	 
-<span class="pattern left"><img src="images/img/download_pattern_left.png" style="width: 100%;"></span>
-<span class="pattern right"><img src="images/img/download_pattern_right.png" style="width: 100%;"></span>	
- 
-	
 
- <div class="juzhong">
-	<div class="iconlogo">
-		<img src="images/timgww.png">
-		</div>
-	 <h2>乐享App</h2>
-	 
-	 <div class="release-info">
-          <p><span>2.0.1 (Build 2.0.1)
-                - 16.11 MB</span></p>
-          <p>更新于: <span>2020-04-09</span></p>
-        </div> 
- </div>
- <div class="dowbt">
-    <!-- <a href="#" class="dowbt-btn x">IOS版本下载</a> 	 -->
-    <a href="#" class="dowbt-btn x lv">
-		安卓版本下载
-		</a> 
-	</div>
-	 <div class="juzhong">
-	 <div class="release-info" style="padding:30px;">
-		 <div style="text-align: left;color:#666 ">
-			<p>乐享头条是一款由杭州万事利丝绸文化股份有限公司打造的，为众多丝绸企业提供品牌和商品信息发布的手机软件。用户可以在这里浏览到各大商家所发布的新闻，也可以根据所发布的新闻和资讯对商品进行购买。</p><br>
-			 <p>乐享头条APP功能特点：</p>
-  
-<p> 1、关注时刻更新丝巾、睡衣、家纺、创意礼品等</p>
-<p>2、商城首页：可以对丝质商品进行选购；</p>
-<p>3、购物车中放好了用户所购买的商品；</p></div>
-		 
-		 </div>
-	</div>
-	 
 
-	
+    <span class="pattern left"><img src="images/img/download_pattern_left.png" style="width: 100%;"></span>
+    <span class="pattern right"><img src="images/img/download_pattern_right.png" style="width: 100%;"></span>
+
+
+
+    <div class="juzhong">
+        <div class="iconlogo">
+            <img src="images/timgww.png">
+        </div>
+        <h2>到家啦App</h2>
+
+        <div class="release-info">
+            <p><span>2.0.1 (Build 2.0.1)
+                    - 16.11 MB</span></p>
+            <p>更新于: <span>2020-04-09</span></p>
+        </div>
+    </div>
+    <div class="dowbt">
+        <a href="#" class="dowbt-btn x">IOS版本下载</a>
+        <a href="#" class="dowbt-btn x lv">
+            安卓版本下载
+        </a>
+    </div>
+    <div class="juzhong">
+        <div class="release-info" style="padding:30px;">
+            <div style="text-align: left;color:#666 ">
+                <p>乐享头条是一款由杭州万事利丝绸文化股份有限公司打造的，为众多丝绸企业提供品牌和商品信息发布的手机软件。用户可以在这里浏览到各大商家所发布的新闻，也可以根据所发布的新闻和资讯对商品进行购买。</p>
+                <br>
+                <p>乐享头条APP功能特点：</p>
+
+                <p> 1、关注时刻更新丝巾、睡衣、家纺、创意礼品等</p>
+                <p>2、商城首页：可以对丝质商品进行选购；</p>
+                <p>3、购物车中放好了用户所购买的商品；</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>
- <script src="weui/jquery.min.js"></script>
-<script src="weui/jquery-weui.min.js"></script> 
+<script src="weui/jquery.min.js"></script>
+<script src="weui/jquery-weui.min.js"></script>
 <script>
-  $(function() {
-    FastClick.attach(document.body);
-  });
-    </script>
- 
- 
- 
+    $(function () {
+        FastClick.attach(document.body);
+    });
+</script>
